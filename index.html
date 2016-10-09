@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<h1>Who Dumped Trump?</h1>
+<p>You deserve to know. Below you'll find where each of the Republican candidates running for House, Senate and governor seats this year stand on Trump's <a href="https://www.washingtonpost.com/politics/trump-recorded-having-extremely-lewd-conversation-about-women-in-2005/2016/10/07/3b9ce776-8cb4-11e6-bf8a-3d26847eeed4_story.html">infamous bus comments.</a></p>
+
+<section class="charts-section">
+  <div class="circle-chart-container">
+    <div class="circle-chart" id="chart1"></div>
+  </div>
+  <div class="circle-chart-container">
+    <div class="circle-chart" id="chart2"></div>
+  </div>
+  <div class="circle-chart-container">
+    <div class="circle-chart" id="chart3"></div>
+  </div>
+</section>
+
+<section class="table-section">
+  <table>
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Position/Office</td>
+        <td>State/District</td>
+        <td>Denounced?</td>
+        <td>Unendorsed?</td>
+        <td>Source</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for retraction in site.data.retractions %}
+        <tr
+          data-office="{{ retraction.office }}"
+          data-denounced="{{ retraction.denounced }}"
+          data-unendorsed="{{ retraction.denounced }}"
+        >
+          <td>{{ retraction.name }}</td>
+          <td>{{ retraction.office }}</td>
+          <td>{{ retraction.district }}</td>
+          <td>{{ retraction.denounced }}</td>
+          <td>{{ retraction.unendorsed }}</td>
+          <td>{% if retraction.source %}<a href="{{ retraction.source }}">{{ retraction.source }}</a>{% endif %}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <script>
+    window.tableData = [
+      {% for retraction in site.data.retractions %}
+      {
+        office: "{{ retraction.office }}",
+        denounced: "{{ retraction.denounced }}",
+        unendorsed: "{{ retraction.denounced }}",
+      },
+      {% endfor %}
+    ]
+  </script>
+</section>
