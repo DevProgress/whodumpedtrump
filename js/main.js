@@ -31,9 +31,15 @@ function drawCirleChart(id, title, office) {
 
   var options = {
     title: title,
+    titleTextStyle: {
+      fontSize: 18,
+    },
     backgroundColor: 'transparent',
     legend: {
       position: 'bottom',
+      textStyle: {
+        fontSize: 10,
+      }
     },
     slices: {
       0: { color: '#aa0000' },
