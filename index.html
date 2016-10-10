@@ -57,7 +57,7 @@
           <tr>
             <td>{{ retraction.name }}</td>
             <td>{{ retraction.office }}</td>
-            <td>{{ retraction.district }}</td>
+            <td>{{ retraction.statedistrict }}</td>
             {% capture denounced %}{{ retraction.denounced | strip }}{% endcapture %}
             {% capture unendorsed %}{{ retraction.unendorsed | strip }}{% endcapture %}
             {% if denounced == 'Yes' %}
@@ -71,10 +71,10 @@
               <td class="cell-no">No</td>
             {% endif %}
             <td>
-              {% if retraction.source %}
-                <a href="{{ retraction.source }}">
+              {% if retraction.sources %}
+                <a href="{{ retraction.sources }}">
                   {{
-                    retraction.source |
+                    retraction.sources |
                       replace: 'http://', '' |
                       replace: 'https://', '' |
                       replace: 'www.', '' |
@@ -103,7 +103,7 @@
       {
         office: "{{ retraction.office }}",
         denounced: "{{ retraction.denounced }}",
-        unendorsed: "{{ retraction.denounced }}",
+        unendorsed: "{{ retraction.unendorsed }}",
       },
       {% endfor %}
     ]
