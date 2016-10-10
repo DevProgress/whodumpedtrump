@@ -65,10 +65,11 @@ google.charts.setOnLoadCallback(function() {
 
 $('.js-retractions-table').DataTable({
   order: [
-    [ 3, "desc" ], [ 4, "desc" ]
+    [ 3, 'desc' ], [ 4, 'desc' ]
   ],
   responsive: true,
   info:     false,
   paging: false,
   scrollY: 400,
 });
+
