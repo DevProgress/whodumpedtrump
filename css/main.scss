@@ -4,15 +4,25 @@
 ---
 @import 'normalize';
 
+//
+// Base Styles
+//
+
 body {
   margin: 0;
   padding: 1em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #111;
-  background-color: #fff;
+  color: #fff;
+  background-color: #2675b9;
   text-align: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dotted white;
 }
 
 //
@@ -23,6 +33,7 @@ body {
   max-width: 600px;
   text-align: center;
   margin: 0 auto;
+  font-weight: bold;
 }
 
 //
@@ -35,6 +46,9 @@ body {
 }
 .circle-chart {
   width: 320px;
+  height: 320px;
+  background-color: #fff;
+  border: 5px solid #53bee4;
 }
 .circle-chart-container {
   display: inline-block;
@@ -46,16 +60,39 @@ body {
 
 .retractions-table {
   margin: 0 auto;
-  padding-top: 1em;
-  padding-bottom: 1em;
-
   thead {
     font-weight: bold;
   }
 }
 
+.dataTables_scroll {
+  color: #111;
+  background-color: #fff;
+  border: 5px solid #53bee4;
+  margin-top: 1em;
+}
+
 .dataTables_filter {
   float: left !important;
+  margin-bottom: 1em;
+}
+
+.cell-no {
+  color: #fff;
+  background-color: red;
+}
+
+.cell-yes {
+  color: #fff;
+  background-color: green;
+}
+
+table.dataTable tbody tr {
+  background-color: transparent;
+}
+
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+  color: #fff;
 }
 
 //
@@ -67,3 +104,4 @@ footer {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
