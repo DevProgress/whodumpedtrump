@@ -22,7 +22,7 @@ body {
 a {
   color: #fff;
   text-decoration: none;
-  border-bottom: 1px dotted white;
+  border-bottom: 1px dotted;
 }
 
 //
@@ -59,9 +59,17 @@ a {
 //
 
 .retractions-table {
-  margin: 0 auto;
+  margin: 1rem auto;
+  background-color: #fff;
+  td {
+    padding: 0.5rem;
+  }
   thead {
     font-weight: bold;
+  }
+  color: #111;
+  a {
+    color: #111;
   }
 }
 
@@ -69,12 +77,12 @@ a {
   color: #111;
   background-color: #fff;
   border: 5px solid #53bee4;
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 .dataTables_filter {
   float: left !important;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .cell-no {
@@ -101,7 +109,7 @@ table.dataTable tbody tr {
 
 footer {
   text-align: center;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
