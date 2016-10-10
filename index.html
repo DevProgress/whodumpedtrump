@@ -16,7 +16,7 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#cc0000">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.12/fh-3.1.2/r-2.1.0/sc-1.4.2/datatables.min.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/dt/dt-1.10.12/r-2.1.0/sc-1.4.2/datatables.min.css" />
   <link rel="stylesheet" href="css/main.css">
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -58,8 +58,8 @@
             <td>{{ retraction.name }}</td>
             <td>{{ retraction.office }}</td>
             <td>{{ retraction.district }}</td>
-            <td>{{ retraction.denounced }}</td>
-            <td>{{ retraction.unendorsed }}</td>
+            <td>{% if retraction.source %}{{ retraction.denounced }}{% else %}No{% endif %}</td>
+            <td>{% if retraction.source %}{{ retraction.unendorsed }}{% else %}No{% endif %}</td>
             <td>{% if retraction.source %}<a href="{{ retraction.source }}">Article</a>{% endif %}</td>
           </tr>
         {% endfor %}
@@ -72,7 +72,7 @@
   </footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="//cdn.datatables.net/v/dt/dt-1.10.12/fh-3.1.2/r-2.1.0/sc-1.4.2/datatables.min.js"></script>
+  <script src="//cdn.datatables.net/v/dt/dt-1.10.12/r-2.1.0/sc-1.4.2/datatables.min.js"></script>
   <script src="//www.gstatic.com/charts/loader.js"></script>
   <script>
     window.tableData = [
