@@ -58,9 +58,32 @@
             <td>{{ retraction.name }}</td>
             <td>{{ retraction.office }}</td>
             <td>{{ retraction.district }}</td>
-            <td>{% if retraction.source %}{{ retraction.denounced }}{% else %}No{% endif %}</td>
-            <td>{% if retraction.source %}{{ retraction.unendorsed }}{% else %}No{% endif %}</td>
-            <td>{% if retraction.source %}<a href="{{ retraction.source }}">Article</a>{% endif %}</td>
+            {% capture denounced %}{{ retraction.denounced | strip }}{% endcapture %}
+            {% capture unendorsed %}{{ retraction.unendorsed | strip }}{% endcapture %}
+            {% if denounced == 'Yes' %}
+              <td class="cell-yes">Yes</td>
+            {% else %}
+              <td class="cell-no">No</td>
+            {% endif %}
+            {% if unendorsed == 'Yes' %}
+              <td class="cell-yes">Yes</td>
+            {% else %}
+              <td class="cell-no">No</td>
+            {% endif %}
+            <td>
+              {% if retraction.source %}
+                <a href="{{ retraction.source }}">
+                  {{
+                    retraction.source |
+                      replace: 'http://', '' |
+                      replace: 'https://', '' |
+                      replace: 'www.', '' |
+                      split: '/' |
+                      first
+                  }}
+                </a>
+              {% endif %}
+            </td>
           </tr>
         {% endfor %}
       </tbody>
