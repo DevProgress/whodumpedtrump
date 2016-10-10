@@ -138,10 +138,19 @@ template { display: none; }
 /** Add the correct display in IE 10-. */
 [hidden] { display: none; }
 
-body { padding: 2rem; margin: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #fff; background-color: #2675b9; }
+body { padding: 2rem; margin: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #111; background-color: #fff; text-align: center; }
 
-h1, p { text-align: center; }
+.lead { max-width: 600px; text-align: center; margin: 0 auto; padding: 1em; }
 
-.table-section { color: black; background-color: white; }
+.charts-section { margin-top: 1em; margin-bottom: 1em; }
 
-.circle-chart { width: 33%; display: inline-block; }
+.circle-chart { width: 320px; }
+
+.circle-chart-container { display: inline-block; }
+
+.retractions-table { margin: 0 auto; }
+.retractions-table thead { font-weight: bold; }
+
+.dataTables_wrapper .dataTables_filter { float: left !important; }
+
+footer { text-align: center; margin-top: 1em; margin-bottom: 1em; }
