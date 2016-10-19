@@ -56,7 +56,7 @@ google.charts.setOnLoadCallback(function() {
   $('.charts-section').show();
   drawCirleChart('chart1', 'House Candidates', 'House');
   drawCirleChart('chart2', 'Senate Candidates', 'Senate');
-  drawCirleChart('chart3', 'Governer Candidates', 'Governor');
+  drawCirleChart('chart3', 'Governor Candidates', 'Governor');
 });
 
 //
